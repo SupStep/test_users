@@ -206,6 +206,10 @@ function applyFilter() {
 	}
 
 	displayUsers(filteredUsers)
+
+	document.getElementById('age-filter-start').checked = false;
+	document.getElementById('age-filter-end').checked = false;
+	document.querySelector('input[type="number"]').value = '';
 }
 
 function sortUsers() {
