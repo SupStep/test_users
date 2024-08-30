@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Пользователи</title>
+	<link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+	<main>
+		<h1 class="page__title">Пользователи</h1>
+
+		<div class="page__menu">
+			<div class='menu__filter-wrapper'>
+				<p>Фильтрация по возрасту:</p>
+				<div class='filter__item'>
+					<label for="age-filter-start">Младше</label>
+					<input type="radio" id="age-filter-start" name="age-filter">
+				</div>
+				<div class='filter__item'>
+					<label for="age-filter-end">Старше</label>
+					<input type="radio" id="age-filter-end" name="age-filter">
+				</div>
+				<div class='filter__item'>
+					<label for="age-filter-num">Введите возраст:</label>
+					<input type="number" min="0" max='99'>
+				</div>
+				<button class="page__button" onclick="applyFilter()">Применить</button>
+			</div>
+			<div class='menu__sort-wrapper'>
+				<label for="sort-by">Сортировать по:</label>
+				<select id="sort-by" name="sort-by" onchange="sortUsers()">
+					<option value="name">Имя</option>
+					<option value="age">Возраст</option>
+				</select>
+			</div>
+		</div>
+
+
+		<ul class="page__list"></ul>
+	</main>
+
+
+	<div class='modal__container' style="display: none;">
+		<div class="modal__content-wrapper">
+			<label for="photo-url">Вставьте ссылку на фото:</label>
+			<input type="text" id="photo-url" placeholder='Ссылка'>
+			<button class="page__button" onclick="addPhoto()">Добавить</button>
+		</div>
+	</div>
+
+	<script src="./script/script.js"></script>
+</body>
+
+</html>
